@@ -9,7 +9,8 @@ servicio.addEventListener('submit', (e) => {
     })
     
     const nombre2 = document.getElementById('nombre2').value
-    const duracion = document.getElementById('duracion').vale
+    const duracion = document.getElementById('duracion').value
+    const precio = document.getElementById('precio').value
 
 
     if(nombre2.trim().length < 3 || nombre2.trim().length > 50){
@@ -18,5 +19,9 @@ servicio.addEventListener('submit', (e) => {
 
     if(duracion < 15){
         document.getElementById('duracionError').innerText = "La duración no puede ser inferior a 15 minutos"
+    }
+
+    if(precio < 0){
+        document.getElementById('precioError').innerText = "El precio no puede ser inferior a 0"
     }
 })
